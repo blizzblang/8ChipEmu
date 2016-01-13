@@ -12,26 +12,17 @@ public class Main {
 	public static KeyInput keys=new KeyInput();
 	public static void main(String[] Args)
 	{
-		
-		
-
-
+		if(Args.length > 1)Scale = Integer.parseInt(Args[1]);
 		OpenGL.setupDisplay(64*scale, 32*scale, false);
 		OpenGL.create();
 		OpenGL.initOpenGL();
 		Comp.loadROM(Args[0]);
-		
-
-		
 		while(!Display.isCloseRequested())
 		{
-			
 			OpenGL.clearBuffers();
 			keys.Update();
-			//if(keys.getKeyUp(Keyboard.KEY_SPACE))
 			Comp.step();
 			Comp.render();
-		//	Display.sync(60);
 			Display.update();
 		}
 		Display.destroy();
