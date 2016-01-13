@@ -12,15 +12,15 @@ public class Main {
 	public static KeyInput keys=new KeyInput();
 	public static void main(String[] Args)
 	{
-
+		
 		
 
 
 		OpenGL.setupDisplay(64*scale, 32*scale, false);
 		OpenGL.create();
 		OpenGL.initOpenGL();
-		Comp.loadROM("games/PONG");
-		Comp.setDebug(true);
+		Comp.loadROM(Args[0]);
+		
 
 		
 		while(!Display.isCloseRequested())
