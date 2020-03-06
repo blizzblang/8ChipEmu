@@ -1,10 +1,6 @@
 package com.nathan;
-
-import java.io.IOException;
-
-
 import com.nathan.cpu.Cpu;
-import static org.lwjgl.opengl.GL11.*;
+
 public class Main {
 	public static int scale=(int) Math.pow(2, 3);
 	public static Cpu Comp = new Cpu();
