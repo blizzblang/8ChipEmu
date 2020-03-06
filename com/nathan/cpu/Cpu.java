@@ -1,21 +1,18 @@
 package com.nathan.cpu;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Random;
 
-import org.lwjgl.opengl.GL11;
+
 
 import com.nathan.Main;
-import com.nathan.OpenGL;
 import com.nathan.UnsignedByte;
 import com.nathan.UnsignedShort;
+import org.lwjgl.opengl.GL11;
 
 public class Cpu {
 	InputStream RomFile;
@@ -75,7 +72,7 @@ public class Cpu {
 			case 0x0:
 			if(debug)
 			System.out.println("Clearing the screen");
-			OpenGL.clearBuffers();
+			//OpenGL.clearBuffers();
 			break;
 			
 			case 0xE:
@@ -441,25 +438,9 @@ public class Cpu {
 		{
 			Keyboard[i] = new UnsignedByte(0x0);
 		}
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_X)){Keyboard[0x0]=new UnsignedByte(0x1);}
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_1)){Keyboard[0x1]=new UnsignedByte(0x1);}
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_2)){Keyboard[0x2]=new UnsignedByte(0x1);}
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_3)){Keyboard[0x3]=new UnsignedByte(0x1);}
-		
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_Q)){Keyboard[0x4]=new UnsignedByte(0x1);}
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_W)){Keyboard[0x5]=new UnsignedByte(0x1);}
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_E)){Keyboard[0x6]=new UnsignedByte(0x1);}
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_A)){Keyboard[0x7]=new UnsignedByte(0x1);}
-		
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_S)){Keyboard[0x8]=new UnsignedByte(0x1);}
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_D)){Keyboard[0x9]=new UnsignedByte(0x1);}
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_Z)){Keyboard[0xa]=new UnsignedByte(0x1);}
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_C)){Keyboard[0xb]=new UnsignedByte(0x1);}
-		
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_4)){Keyboard[0xc]=new UnsignedByte(0x1);}
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_R)){Keyboard[0xd]=new UnsignedByte(0x1);}
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_F)){Keyboard[0xe]=new UnsignedByte(0x1);}
-		if(Main.keys.getKeyDown(org.lwjgl.input.Keyboard.KEY_V)){Keyboard[0xf]=new UnsignedByte(0x1);}
+		/*
+		Keyboard input
+		 */
 
 	}
 	public void setDebug(boolean b) {
