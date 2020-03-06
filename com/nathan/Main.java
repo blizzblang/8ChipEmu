@@ -2,6 +2,7 @@ package com.nathan;
 import com.nathan.cpu.Cpu;
 
 public class Main {
+
 	public static int scale=(int) Math.pow(2, 3);
 	public static Cpu Comp = new Cpu();
 	public static KeyInput keys=new KeyInput();
